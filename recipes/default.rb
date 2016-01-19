@@ -13,9 +13,7 @@ package 'rsyslog-gnutls'
 
 papertrail_conf_dir = '/etc/papertrail'
 
-rbenv_gem 'remote_syslog' do
-  version node[:papertrail][:remote_syslog][:version]
-end
+include_recipe "remote_syslog2"
 
 
 directory papertrail_conf_dir do
